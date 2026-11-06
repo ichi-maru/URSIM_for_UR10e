@@ -1,0 +1,13 @@
+services:
+  ursim:
+    image: universalrobots/ursim_e-series:5.26.3
+    container_name: ursim
+    environment:
+      - ROBOT_MODEL=UR10
+    ports:
+      - "6080:6080"
+      - "5900:5900"
+      - "29999:29999"
+      - "30001-30004:30001-30004"
+    volumes:
+      - ./programs:/ursim/programs
